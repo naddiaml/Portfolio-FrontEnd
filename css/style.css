@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.header {
+    background-color: #ffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 9999;
+}
+
+/* Logos y botón a modo edición */
+
+.header__logo {
+    margin-right: auto;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+}
+
+.nav__links li:not(:first-of-type) {
+    margin: 0 25px;
+}
+
+.nav__links li:first-of-type {
+    margin-right: 20px;
+}
+
+.nav__link {
+    width: 15px;
+}
+
+.nav__button {
+    border: 0;
+    border-radius: 50px;
+    width: 200px;
+    height: 45px;
+    background: linear-gradient(to right, #F6D365, #FDA085);
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Menú mobile responsive */
+
+
+#nav__checkbox {
+    display: none;
+}
+
+.nav_checkbox-label {
+    color:#000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Sección principal · About me*/
+
+.section1__container {
+    width: 100%;
+    height: max-content;
+}
+
+.section1-about {
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    z-index: -10;
+    padding: .5rem 0;
+}
+
+.section1__banner {
+    margin: auto;
+    position: relative;
+    width: 80vw;
+    height: 40vh;
+    background-image: url(https://images.unsplash.com/photo-1534538495100-e945f7a5a9c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+    background-position: 10% 50%;
+    background-size: cover;
+    z-index: -10;
+}
+
+.section1__display-container {
+    margin-left: 3vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.section1__pfp {
+    position: relative;
+    top: -5rem;
+    width: 20vh;
+    border-radius: 50%;
+    border: .5rem solid #fff;
+}
+
+.section1__text-container {
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+    padding: 0 10px;
+}
+
+.text-container__name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-container__puesto {
+    margin-left: 1vw;
+    margin-top: 1vh;
+    font-size: 18;
+    font-weight: 700;
+}
+
+.text-container__description {
+    line-height: 30px;
+    margin-left: 2vw;
+    margin-top: 1vh;
+    font-size: 15px;
+    text-align: justify;
+    width: 95%;
+}
+
+.description__bold {
+    font-weight: 700;
+}
+
+
+.divider {
+    width: 80%;
+    height: .5px;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    position: initial;
+    margin: auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 850px) {
+
+    .header {
+        z-index: 1;
+    }
+
+    .nav_checkbox-label {
+        display: block;
+    }
+
+    .nav__links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 80px;
+        padding-top: 50px;
+        left: -1000vh;
+        text-align: center;
+        transition: 0.5s;
+        z-index: -10;
+    }
+    
+
+    .nav__links a{
+        display: block;
+    }
+
+    .nav__button {
+        margin-top: 35px;
+    }
+
+    #nav__checkbox:checked ~ .nav__links {
+        left: 0;
+    }
+
+    .section1__banner {
+        height: 25vh;
+        background-position: 0 50%;
+        margin: auto;
+        width: 80vw;
+        z-index: -11;
+    }
+
+    .section1__display-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -5vh;
+    }
+
+    .section1__pfp-container {
+        z-index: -1;
+    }
+    
+    .section1__pfp {
+        top: -1vh;
+        width: 15vh;
+        border-radius: 50%;
+        border: 6px solid #fff;
+    }
+
+    .section1__text-container {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+
+    .container__header {
+        z-index: 100;
+    }
+    
+    .section1__banner {
+        height: 40vh;
+        background-position: 65% 50%;
+        z-index: -10;
+    }
+
+    .section1__pfp {
+        z-index: 0;
+    }
+
+    .text-container__name {
+        font-size: 17px;
+    }
+
+    .text-container__puesto {
+        font-size: 17px;
+    }
+
+    .text-container__description {
+        font-size: 14px;
+        text-align: justify;
+        width: 95%;
+    }
+
+}
