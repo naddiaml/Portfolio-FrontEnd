@@ -1,0 +1,237 @@
+:root {
+    --gradient: linear-gradient(to right, #F6D365, #FDA085);
+    --background-button: #D9D9D9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header__container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.header {
+    background-color: #ffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* Logos y botón a modo edición */
+
+.header__logo {
+    margin-right: auto;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+}
+
+.nav__links li:not(:first-of-type) {
+    margin: 0 25px;
+}
+
+.nav__links li:first-of-type {
+    margin-right: 20px;
+}
+
+.nav__link {
+    width: 15px;
+}
+
+.nav__button {
+    border: 0;
+    border-radius: 50px;
+    width: 200px;
+    height: 45px;
+    background: var(--background-button);
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Menú mobile responsive */
+
+
+#nav__checkbox {
+    display: none;
+}
+
+.nav_checkbox-label {
+    color:#000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Login */
+
+
+.login__container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.login__img {
+    width: 400px;
+}
+
+.divider {
+    width: .5px;
+    height: 400px;
+    margin: 0 35px;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login__right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login__bienvenida{
+    padding: 25px 0 15px 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.login__inicia {
+    font-size: 16px;
+}
+
+.right__inicia {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    background-color: var(--background-button);
+    height: 45px;
+    border-radius: 25px;
+    margin-top: 24px;
+    width: 300px;
+}
+
+.input-box:hover{
+    border: 1px solid var(--background-button);
+    box-shadow: 0px 3px 20px -10px rgb( 100, 100, 100);
+}
+
+span > figure > img{
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 0px;
+}
+
+.search-bar__input {
+    flex-grow: 2;
+    outline: none;
+    border: none;
+    cursor: text;
+    font-size: 14px;
+    background-color: var(--background-button);
+}
+
+.login__button {
+    border: 0;
+    border-radius: 50px;
+    width: 180px;
+    height: 45px;
+    background: var(--gradient);
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 25px;
+
+}
+
+
+
+@media (max-width: 850px) {
+
+    .header {
+        z-index: 1;
+    }
+
+    .nav_checkbox-label {
+        display: block;
+    }
+
+    .nav__links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 80px;
+        padding-top: 50px;
+        left: -1000vh;
+        text-align: center;
+        transition: 0.5s;
+        z-index: -10;
+    }
+    
+
+    .nav__links a{
+        display: block;
+    }
+
+    .nav__button {
+        margin-top: 35px;
+    }
+
+    #nav__checkbox:checked ~ .nav__links {
+        left: 0;
+    }
+
+    .login__container {
+        flex-direction: column;
+    }
+
+    .login__left-container, .divider {
+        display: none;
+    }
+}
