@@ -12,7 +12,6 @@
 
 .header__container {
     width: 100%;
-    position: fixed;
     top: 0;
     z-index: 9999;
 }
@@ -20,10 +19,7 @@
 .header {
     background-color: #ffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
     height: 80px;
-    justify-content: flex-end;
-    align-items: center;
     padding: 30px 10%;
 }
 
@@ -38,6 +34,7 @@
 .nav__links {
     list-style: none;
 }
+
 
 .nav__links li {
     display: inline-block;
@@ -66,12 +63,9 @@
     cursor: pointer;
 }
 
+
 /* Menú mobile responsive */
 
-
-#nav__checkbox {
-    display: none;
-}
 
 .nav_checkbox-label {
     color:#000;
@@ -99,7 +93,6 @@
 
 .about-section__banner {
     margin: auto;
-    position: relative;
     width: 80vw;
     height: 40vh;
     background-image: url(https://images.unsplash.com/photo-1534538495100-e945f7a5a9c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
@@ -110,16 +103,11 @@
 
 .about-section__display-container {
     margin-left: 3vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
 }
 
 .about-section__pfp {
-    position: relative;
     top: -5rem;
     width: 20vh;
-    border-radius: 50%;
     border: .5rem solid #fff;
 }
 
@@ -185,11 +173,7 @@
     list-style: none;
 }
 
-.about-section__list li {
-    display: flex;
-    align-items: flex-start;
-    margin: 50px 0 0 0;
-}
+
 
 .about-section__list li:first-of-type {
     margin: 30px 0 0 0;
@@ -199,9 +183,11 @@
     width: 80px;
 }
 
+.list__items {
+    margin: 2.5rem 0 0 0;
+}
+
 .list__items-text {
-    display: flex;
-    flex-direction: column;
     margin-left: 50px;
 }
 
@@ -242,10 +228,6 @@
 
 .skills__container {
     margin-top: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .skill {
@@ -276,9 +258,15 @@
     justify-content: center;
 }
 
-#skill__icon img {
-    width: 40px;
+
+.skill__icon i {
+    font-size: 30px;
 }
+
+.skill__icon img {
+    width: 35px;
+}
+
 
 svg {
     position: absolute;
@@ -344,8 +332,6 @@ circle {
 
 .cards__container {
     margin: 25px 0 25px 0;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -473,7 +459,6 @@ a.card__button-href[href] {
     }
 
     .about-section__display-container {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -488,7 +473,6 @@ a.card__button-href[href] {
     .about-section__pfp {
         top: -1vh;
         width: 15vh;
-        border-radius: 50%;
         border: 6px solid #fff;
     }
 
@@ -497,14 +481,14 @@ a.card__button-href[href] {
         width: 100%;
     }
 
-    .about-section__list li {
-        display: flex;
-        margin-top: 15px;
-    }
 
     .about-section__list li img {
         margin-bottom: 10px;
         width: 60px;
+    }
+
+    .list__items {
+        margin-top: 3rem;
     }
 
     .list__items-text {
