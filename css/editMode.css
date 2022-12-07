@@ -156,6 +156,10 @@ span > figure > img{
     margin: 25px;
 }
 
+.login__button a { 
+    color: #000;
+}
+
 
 
 @media (max-width: 850px) {
