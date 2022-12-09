@@ -190,7 +190,7 @@
   width: 20vh;
   height: 20vh;
   border: 0.5rem solid #fff;
-  background-image: url(/assets/Avatar.png);
+  background-image: url(".../assets/Avatar.png");
   background-position: 50%;
   background-size: cover;
 }
