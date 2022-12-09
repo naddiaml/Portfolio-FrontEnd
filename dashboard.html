@@ -1,284 +1,1917 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/icon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <script src="https://kit.fontawesome.com/d1cf470953.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/d1cf470953.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Mi Portfolio</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="header__container position-fixed">
-        <header class="header d-flex align-items-center">
-            <img src="assets/Argentina Programa logo.png" alt="" class="header__logo">
-            <nav class="nav">
-                    <input type="checkbox" name="" id="nav__checkbox" class="d-none">
-                    <label for="nav__checkbox" class="nav_checkbox-label m-0 ">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                    <ul class="nav__links mb-0 ps-0">
-                        <li><a href="https://www.instagram.com/naddiaml_/" target="_blank"><i class="fa-brands fa-instagram text-black nav__link"></i></a></li>
-                        <li><a href="https://twitter.com/naddiaml" target="_blank"><i class="fa-brands fa-twitter text-black nav__link"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/nadia-mlinarevic/" target="_blank"><i class="fa-brands fa-linkedin-in text-black nav__link"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa-brands fa-github text-black nav__link"></i></a></li>
-                        <a href="index.html"><button class="nav__button">Salir del Modo edición</button></a>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+      <header class="header d-flex align-items-center">
+        <img
+          src="assets/Argentina Programa logo.png"
+          alt=""
+          class="header__logo"
+        />
+        <nav class="nav">
+          <input type="checkbox" name="" id="nav__checkbox" class="d-none" />
+          <label for="nav__checkbox" class="nav_checkbox-label m-0">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <ul class="nav__links mb-0 ps-0">
+            <li>
+              <a href="https://www.instagram.com/naddiaml_/" target="_blank"
+                ><i class="fa-brands fa-instagram text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/naddiaml" target="_blank"
+                ><i class="fa-brands fa-twitter text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nadia-mlinarevic/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin-in text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github text-black nav__link"></i
+              ></a>
+            </li>
+            <a href="index.html"
+              ><button class="nav__button">Salir del Modo edición</button></a
+            >
+          </ul>
+        </nav>
+      </header>
     </div>
 
     <!-- Sección principal · About me -->
 
     <div class="section__container">
-        <section class="about-section">
-                <div class="about-section__banner d-relative">
-                    <div class="edit-banner d-relative"></div>
+      <section class="about-section">
+        <div class="about-section__banner d-relative">
+          <div class="edit-banner d-flex justify-content-center">
+            <div class="edit-button__container d-flex justify-content-center">
+              <button
+                class="edit-button rounded-circle"
+                type="button"
+                data-toggle="modal"
+                data-target="#modal-banner"
+              >
+                <img src="assets/Edit-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Modal banner -->
+        <div class="modal__container">
+          <div
+            class="modal fade"
+            id="modal-banner"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Editar banner</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-                <div class="about-section__display-container d-flex justify-content-around align-items-stretch">
-                    <div class="about-section-container">
-                        <img src="assets/Avatar.png" alt="Mi foto" class="about-section__pfp position-relative rounded-circle">
-                        <div class="edit-pfp position-relative rounded-circle"></div>
-                    </div>
-                    <div class="about-section__text-container">
-                        <p class="text-container__name">Nadia Mlinarevic</p>
-                        <p class="text-container__puesto">Full Stack Developer Jr.</p>
-                        <p class="text-container__description">Hola! Soy Nadia 🙋🏻‍♀️
-                            <br>
-                        → Tego 18 años y soy de Buenos Aires, Argentina.
-                            <br>
-                        → Soy ingresante a la carrera de Ingeniería en Sistemas y <span class="description__bold">Desarrolladora Web Full Stack Jr.</span> que busca capacitarse y mejorar constantemente en el área.
-                         <br>
-                       → Encuentro mi lugar en el área de IT porque puedo plasmar en distintos proyectos todas las cosas que me apasionan. Con el propósito de mejorar cada vez más, trato de perfeccionarme en este espacio en el cual me siento libre de crear, crecer y ser yo sin límites 🙌🏻.</p>
-                    </div>
+                <div class="modal-body">
+                  <span class="modal-input-span">Ingresa la URL 👇🏻</span>
+                  <input
+                    type="url"
+                    class="modal-input"
+                    required
+                    placeholder="https://www"
+                  />
                 </div>
-            
-        </section>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="button cancel-button"
+                    data-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="button" class="button save-button">
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="about-section__display-container d-flex justify-content-around align-items-stretch"
+        >
+          <div class="about-section__pfp-container">
+            <div class="about-section__pfp position-relative rounded-circle">
+              <div
+                class="edit-pfp rounded-circle d-flex justify-content-center"
+              >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-pfp"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="edit__container bio desktop">
+              <span class="span-edit bio d-flex justify-content-center"
+                >Editar bio</span
+              >
+              <div class="edit-button__container d-flex justify-content-center">
+                <button
+                  class="edit-button rounded-circle"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#modal-bio"
+                >
+                  <img src="assets/Edit-icon.png" alt="" />
+                </button>
+              </div>
+              <!-- Modal bio -->
+              <div class="modal__container">
+                <div
+                  class="modal fade bio"
+                  id="modal-bio"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Editar bio</h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <label class="modal-label title" for="#modal-textarea"
+                          >Ingresa aquí tu nueva bio 👇🏻</label
+                        >
+                        <textarea
+                          name=""
+                          id="modal-textarea"
+                          cols="30"
+                          rows="10"
+                          type="text"
+                          class="form-label modal-textarea"
+                          required
+                          placeholder="Ingresa aquí tu nueva bio"
+                        ></textarea>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal pfp -->
+          <div class="modal__container">
+            <div
+              class="modal fade"
+              id="modal-pfp"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Editar foto de perfil</h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <span class="modal-input-span">Ingresa la URL 👇🏻</span>
+                    <input
+                      type="url"
+                      class="modal-input"
+                      required
+                      placeholder="https://www"
+                    />
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="button cancel-button"
+                      data-dismiss="modal"
+                    >
+                      Cancelar
+                    </button>
+                    <button type="button" class="button save-button">
+                      Guardar cambios
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section__text-container">
+            <p class="text-container__name">Nadia Mlinarevic</p>
+            <p class="text-container__puesto">Full Stack Developer Jr.</p>
+            <p class="text-container__description">
+              Hola! Soy Nadia 🙋🏻‍♀️
+              <br />
+              → Tego 18 años y soy de Buenos Aires, Argentina.
+              <br />
+              → Soy ingresante a la carrera de Ingeniería en Sistemas y
+              <span class="description__bold"
+                >Desarrolladora Web Full Stack Jr.</span
+              >
+              que busca capacitarse y mejorar constantemente en el área.
+              <br />
+              → Encuentro mi lugar en el área de IT porque puedo plasmar en
+              distintos proyectos todas las cosas que me apasionan. Con el
+              propósito de mejorar cada vez más, trato de perfeccionarme en este
+              espacio en el cual me siento libre de crear, crecer y ser yo sin
+              límites 🙌🏻.
+            </p>
+          </div>
+        </div>
+        <div class="edit__container bio mobile">
+          <span class="span-edit bio d-flex justify-content-center"
+            >Editar bio</span
+          >
+          <div class="edit-button__container d-flex justify-content-center">
+            <button
+              class="edit-button rounded-circle"
+              type="button"
+              data-toggle="modal"
+              data-target="#modal-bio-mobile"
+            >
+              <img src="assets/Edit-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- Modal bio -->
+        <div class="modal__container">
+          <div
+            class="modal fade bio"
+            id="modal-bio-mobile"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Editar bio</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <label class="modal-label title" for="#modal-textarea"
+                    >Ingresa aquí tu nueva bio 👇🏻</label
+                  >
+                  <textarea
+                    name=""
+                    id="modal-textarea"
+                    cols="30"
+                    rows="10"
+                    type="text"
+                    class="form-label modal-textarea"
+                    required
+                    placeholder="Ingresa aquí tu nueva bio"
+                  ></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="button cancel-button"
+                    data-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="button" class="button save-button">
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    
+
     <div class="divider"></div>
 
-    
     <!-- Sección 2 · Educación -->
     <div class="section__container">
-        <section class="section">
-            <span class="section__name">Educación</span>
-            <div class="section__items-container">
-                <ul class="about-section__list mb-0 ps-0">
-                    <li class="list__items d-flex align-items-start"><img src="https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg" alt="Logo UTN BA">
-                        <!-- Ingeniería en Sistemas · UTN BA -->
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Ingreso · Ingeriería en Sistemas · UTN BA</span>
-                            <span class="finalizacion">En curso</span>
-                        </div>
-                    </li>
-                    <!-- Argentina Programa -->
-                    <li class="list__items d-flex align-items-start"><img src="assets/Argentina Programa logo.svg" alt="Logo Argentina Programa">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Argentina Programa</span>
-                            <span class="titulo">Desarrolladora Web Full Stack Jr.</span>
-                            <span class="finalizacion">2023</span>
-                        </div>
-                    </li>
-                    <!-- Curso Experiencia de Usuario UX/UI -->
-                    <li class="list__items d-flex align-items-start"><img src="https://plataforma.jumpedu.org/pluginfile.php/1/theme_edumy/headerlogo2/1659459569/jumpedu-logo%402x-8.png" alt="Logo Jump! Education">
-                      <div class="list__items-text d-flex flex-column">
-                          <span>Experiencia de Usuario UX/UI · Jump! Educación</span>
-                          <span class="finalizacion">2022</span>
-                      </div>
-                  </li>
-                    <!-- Curso UX -->
-                    <li class="list__items d-flex align-items-start"><img src="https://chicasentecnologia.org/wp-content/uploads/chicas_registrado.svg" alt="Logo Chicas en Tecnología">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Curso Diseño UX · Chicas en Tecnología</span>
-                            <span class="finalizacion">2022</span>
-                        </div>
-                    </li>
-                    <!-- Secundario -->
-                    <li class="list__items d-flex align-items-start"><img src="assets/SCB-logo.svg" alt="Logo · Colegio secundario San Carlos Borromeo">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Colegio Parroquial San Carlos Borromeo</span>
-                            <span class="titulo">Bachillerato en Comunicación</span>
-                            <span class="finalizacion">2022</span>
-                        </div>
-                    </li>
-
-                </ul>
+      <section class="section">
+        <span class="section__name">Educación</span>
+        <div
+          class="edit__container new-item d-flex justify-content-between align-items-center"
+        >
+          <span class="span-edit s-new-item">Agregar nuevo ítem</span>
+          <div class="edit-button__container d-flex justify-content-center">
+            <button
+              class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+              type="button"
+              data-toggle="modal"
+              data-target="#modal-newItem"
+            >
+              <img src="assets/plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- Modal añadir item -->
+        <div class="modal__container">
+          <div
+            class="modal fade new-Item"
+            id="modal-newItem"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Agregar nuevo item</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span class="modal-input-span title"
+                    >Ingresa la nueva URL de la imagen 👇🏻</span
+                  >
+                  <input
+                    type="url"
+                    class="modal-input"
+                    required
+                    placeholder="https://www"
+                  />
+                  <label class="modal-label title" for="#modal-nombre"
+                    >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+                  >
+                  <input
+                    type="text"
+                    name=""
+                    id="modal-nombre"
+                    class="modal-input"
+                    placeholder="Nombre del curso o carrera"
+                  />
+                  <label class="modal-label title" for="#modal-titulo"
+                    >Ingresa aquí título 👇🏻</label
+                  >
+                  <input
+                    type="text"
+                    name=""
+                    id="modal-titulo"
+                    class="modal-input"
+                    placeholder="Título"
+                  />
+                  <label class="modal-label title" for="#modal-finalizado"
+                    >Ingresa aquí una fecha aproximada de finalización👇🏻</label
+                  >
+                  <input
+                    type="date"
+                    name=""
+                    id="modal-finalizado"
+                    class="modal-input"
+                    placeholder=""
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="button cancel-button"
+                    data-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="button" class="button save-button">
+                    Agregar Item
+                  </button>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="section__items-container">
+          <ul class="about-section__list mb-0 ps-0">
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg"
+                alt="Logo UTN BA"
+              />
+
+              <!-- Ingeniería en Sistemas · UTN BA -->
+              <div class="list__items-text d-flex flex-column">
+                <span>Ingreso · Ingeriería en Sistemas · UTN BA</span>
+                <span class="finalizacion">En curso</span>
+                <div
+                  class="edit__container items d-flex justify-content-between align-items-center"
+                >
+                  <span class="span-edit items">Editar o eliminar ítem</span>
+                  <div
+                    class="edit-button__container d-flex justify-content-center"
+                  >
+                    <button
+                      class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#modal-firstItem"
+                    >
+                      <img src="assets/Edit-icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Modal 1ª item -->
+            <div class="modal__container">
+              <div
+                class="modal fade item"
+                id="modal-firstItem"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editar item 1</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span class="modal-input-span title"
+                        >Ingresa la nueva URL de la imagen 👇🏻</span
+                      >
+                      <input
+                        type="url"
+                        class="modal-input"
+                        required
+                        placeholder="https://www"
+                      />
+                      <label class="modal-label title" for="#modal-nombre"
+                        >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-nombre"
+                        class="modal-input"
+                        placeholder="Nombre del curso o carrera"
+                      />
+                      <label class="modal-label title" for="#modal-titulo"
+                        >Ingresa aquí título 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-titulo"
+                        class="modal-input"
+                        placeholder="Título"
+                      />
+                      <label class="modal-label title" for="#modal-finalizado"
+                        >Ingresa aquí una fecha aproximada de
+                        finalización👇🏻</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="modal-finalizado"
+                        class="modal-input"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                      <div class="left__container">
+                        <span class="delete-item">Eliminar item</span>
+                      </div>
+                      <div class="right__container">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Argentina Programa -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="assets/Argentina Programa logo.svg"
+                alt="Logo Argentina Programa"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Argentina Programa</span>
+                <span class="titulo">Desarrolladora Web Full Stack Jr.</span>
+                <span class="finalizacion">2023</span>
+                <div
+                  class="edit__container items d-flex justify-content-between align-items-center"
+                >
+                  <span class="span-edit items">Editar o eliminar ítem</span>
+                  <div
+                    class="edit-button__container d-flex justify-content-center"
+                  >
+                    <button
+                      class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#modal-secondItem"
+                    >
+                      <img src="assets/Edit-icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Modal 2ª item -->
+            <div class="modal__container">
+              <div
+                class="modal fade item"
+                id="modal-secondItem"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editar item 2</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span class="modal-input-span title"
+                        >Ingresa la nueva URL de la imagen 👇🏻</span
+                      >
+                      <input
+                        type="url"
+                        class="modal-input"
+                        required
+                        placeholder="https://www"
+                      />
+                      <label class="modal-label title" for="#modal-nombre"
+                        >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-nombre"
+                        class="modal-input"
+                        placeholder="Nombre del curso o carrera"
+                      />
+                      <label class="modal-label title" for="#modal-titulo"
+                        >Ingresa aquí título 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-titulo"
+                        class="modal-input"
+                        placeholder="Título"
+                      />
+                      <label class="modal-label title" for="#modal-finalizado"
+                        >Ingresa aquí una fecha aproximada de
+                        finalización👇🏻</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="modal-finalizado"
+                        class="modal-input"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                      <div class="left__container">
+                        <span class="delete-item">Eliminar item</span>
+                      </div>
+                      <div class="right__container">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Curso Experiencia de Usuario UX/UI -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://plataforma.jumpedu.org/pluginfile.php/1/theme_edumy/headerlogo2/1659459569/jumpedu-logo%402x-8.png"
+                alt="Logo Jump! Education"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Experiencia de Usuario UX/UI · Jump! Educación</span>
+                <span class="finalizacion">2022</span>
+                <div
+                  class="edit__container items d-flex justify-content-between align-items-center"
+                >
+                  <span class="span-edit items">Editar o eliminar ítem</span>
+                  <div
+                    class="edit-button__container d-flex justify-content-center"
+                  >
+                    <button
+                      class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#modal-thirdItem"
+                    >
+                      <img src="assets/Edit-icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Modal 3ª item -->
+            <div class="modal__container">
+              <div
+                class="modal fade item"
+                id="modal-thirdItem"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editar Item 3</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span class="modal-input-span title"
+                        >Ingresa la nueva URL de la imagen 👇🏻</span
+                      >
+                      <input
+                        type="url"
+                        class="modal-input"
+                        required
+                        placeholder="https://www"
+                      />
+                      <label class="modal-label title" for="#modal-nombre"
+                        >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-nombre"
+                        class="modal-input"
+                        placeholder="Nombre del curso o carrera"
+                      />
+                      <label class="modal-label title" for="#modal-titulo"
+                        >Ingresa aquí título 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-titulo"
+                        class="modal-input"
+                        placeholder="Título"
+                      />
+                      <label class="modal-label title" for="#modal-finalizado"
+                        >Ingresa aquí una fecha de finalización👇🏻</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="modal-finalizado"
+                        class="modal-input"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                      <div class="left__container">
+                        <span class="delete-item">Eliminar item</span>
+                      </div>
+                      <div class="right__container">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Curso UX -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://chicasentecnologia.org/wp-content/uploads/chicas_registrado.svg"
+                alt="Logo Chicas en Tecnología"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Curso Diseño UX · Chicas en Tecnología</span>
+                <span class="finalizacion">2022</span>
+                <div
+                  class="edit__container items d-flex justify-content-between align-items-center"
+                >
+                  <span class="span-edit items">Editar o eliminar ítem</span>
+                  <div
+                    class="edit-button__container d-flex justify-content-center"
+                  >
+                    <button
+                      class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#modal-fourthItem"
+                    >
+                      <img src="assets/Edit-icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Modal 4ª item -->
+            <div class="modal__container">
+              <div
+                class="modal fade item"
+                id="modal-fourthItem"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editar Item 4</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span class="modal-input-span title"
+                        >Ingresa la nueva URL de la imagen 👇🏻</span
+                      >
+                      <input
+                        type="url"
+                        class="modal-input"
+                        required
+                        placeholder="https://www"
+                      />
+                      <label class="modal-label title" for="#modal-nombre"
+                        >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-nombre"
+                        class="modal-input"
+                        placeholder="Nombre del curso o carrera"
+                      />
+                      <label class="modal-label title" for="#modal-titulo"
+                        >Ingresa aquí título 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-titulo"
+                        class="modal-input"
+                        placeholder="Título"
+                      />
+                      <label class="modal-label title" for="#modal-finalizado"
+                        >Ingresa aquí una fecha aproximada de
+                        finalización👇🏻</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="modal-finalizado"
+                        class="modal-input"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                      <div class="left__container">
+                        <span class="delete-item">Eliminar item</span>
+                      </div>
+                      <div class="right__container">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secundario -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="assets/SCB-logo.svg"
+                alt="Logo · Colegio secundario San Carlos Borromeo"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Colegio Parroquial San Carlos Borromeo</span>
+                <span class="titulo">Bachillerato en Comunicación</span>
+                <span class="finalizacion">2022</span>
+                <div
+                  class="edit__container items d-flex justify-content-between align-items-center"
+                >
+                  <span class="span-edit items">Editar o eliminar ítem</span>
+                  <div
+                    class="edit-button__container d-flex justify-content-center"
+                  >
+                    <button
+                      class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#modal-fifthItem"
+                    >
+                      <img src="assets/Edit-icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- Modal 5ª item -->
+    <div class="modal__container">
+      <div
+        class="modal fade item"
+        id="modal-fifthItem"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar Item 5</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span class="modal-input-span title"
+                >Ingresa la nueva URL de la imagen 👇🏻</span
+              >
+              <input
+                type="url"
+                class="modal-input"
+                required
+                placeholder="https://www"
+              />
+              <label class="modal-label title" for="#modal-nombre"
+                >Ingresa aquí el nombre del curso o carrera 👇🏻</label
+              >
+              <input
+                type="text"
+                name=""
+                id="modal-nombre"
+                class="modal-input"
+                placeholder="Nombre del curso o carrera"
+              />
+              <label class="modal-label title" for="#modal-titulo"
+                >Ingresa aquí título 👇🏻</label
+              >
+              <input
+                type="text"
+                name=""
+                id="modal-titulo"
+                class="modal-input"
+                placeholder="Título"
+              />
+              <label class="modal-label title" for="#modal-finalizado"
+                >Ingresa aquí una fecha aproximada de finalización👇🏻</label
+              >
+              <input
+                type="date"
+                name=""
+                id="modal-finalizado"
+                class="modal-input"
+                placeholder=""
+              />
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+              <div class="left__container">
+                <span class="delete-item">Eliminar item</span>
+              </div>
+              <div class="right__container">
+                <button
+                  type="button"
+                  class="button cancel-button"
+                  data-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="button" class="button save-button">
+                  Guardar cambios
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="divider"></div>
 
     <!-- Sección 3 · Skills -->
     <div class="section__container">
-        <section class="section">
-            <p class="section__name"> Skills
-              <br>
-              <span class="aclaracion">Según ruta de aprendizaje recomendada.</span>
-            </p>
-            <div class="section__items-container">
-              <div class="skills__container d-flex align-items-center justify-content-between">
-
-                <div class="first__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-html5 text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="second__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-css3-alt text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="third__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-bootstrap text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-              </div>
-  
-              <div class="skills__container d-flex align-items-center justify-content-between">
-  
-                <div class="fourth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-square-js text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="fifth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <img src="https://img.icons8.com/material-rounded/512/typescript.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="sixth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-angular text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="divider"></div>
-    <div class="section__container">
       <section class="section">
-        <span class="section__name">Proyectos</span>
-        <div class="section__items-container">
-          <div class="cards__container d-flex">
-            <div class="card">
-              <div class="card__img">
-                <img src="assets/MidonApp.png" alt="">
+        <p class="section__name">
+          Skills
+          <br />
+          <span class="aclaracion">Según ruta de aprendizaje recomendada.</span>
+        </p>
+        <div
+          class="edit__container new-skill d-flex justify-content-between align-items-center"
+        >
+          <span class="span-edit s-new-skill">Agregar nueva skill</span>
+          <div class="edit-button__container d-flex justify-content-center">
+            <button
+              class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+              type="button"
+              data-toggle="modal"
+              data-target="#modal-newSkill"
+            >
+              <img src="assets/plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- Modal añadir skill -->
+        <div class="modal__container">
+          <div
+            class="modal fade new-Skill"
+            id="modal-newSkill"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Agregar nueva Skill</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span class="modal-input-span title"
+                    >Ingresa la URL del icono 👇🏻</span
+                  >
+                  <input
+                    type="url"
+                    class="modal-input"
+                    required
+                    placeholder="https://www"
+                  />
+                  <span class="modal-input-span title"
+                    >Ingresa un porcentaje 👇🏻</span
+                  >
+                  <input
+                    type="number"
+                    class="modal-input"
+                    required
+                    placeholder="Ingresa un número"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="button cancel-button"
+                    data-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="button" class="button save-button">
+                    Agregar Skill
+                  </button>
+                </div>
               </div>
-              <div class="card__text-container">
-                <span class="project-name">MiDonApp</span>
-                <p class="project-description">MiDonApp nació como una solución a una problemática social muy presente en mi comunidad. Busca mejorar en varios aspectos la convivencia social, teniendo como fin el desarrollo de las personas más necesitadas.</p>
-              </div>
-              <a href="#" class="card__button-href"><button class="card__button">Visitar proyecto | <img src="assets/ExternalLink-Icon.png" alt="" class="external-link"></button></a>
-            </div>
-            <div class="card">
-              <div class="card__img">
-                <img src="assets/MidonApp.png" alt="">
-              </div>
-              <div class="card__text-container">
-                <span class="project-name">MiDonApp</span>
-                <p class="project-description">MiDonApp nació como una solución a una problemática social muy presente en mi comunidad. Busca mejorar en varios aspectos la convivencia social, teniendo como fin el desarrollo de las personas más necesitadas.</p>
-              </div>
-              <a href="#" class="card__button-href"><button class="card__button">Visitar proyecto | <img src="assets/ExternalLink-Icon.png" alt="" class="external-link"></button></a>
             </div>
           </div>
         </div>
+        <div class="section__items-container">
+          <div
+            class="skills__container d-flex align-items-center justify-content-between"
+          >
+            <div class="first__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-html5 text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+              <div class="edit__container skill">
+                <span class="span-edit skills d-flex justify-content-center"
+                  >Editar Skill</span
+                >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-firstSkill"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+              <!-- Modal First Skill -->
+              <div class="modal__container">
+                <div
+                  class="modal fade edit-skill"
+                  id="modal-firstSkill"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Editar Skill 1</h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <span class="modal-input-span title"
+                          >Ingresa un porcentaje 👇🏻</span
+                        >
+                        <input
+                          type="number"
+                          class="modal-input"
+                          required
+                          placeholder="Ingresa un número"
+                        />
+                      </div>
+                      <div class="modal-footer d-flex justify-content-between">
+                        <div class="left__container">
+                          <span class="delete-item">Eliminar item</span>
+                        </div>
+                        <div class="right__container">
+                          <button
+                            type="button"
+                            class="button cancel-button"
+                            data-dismiss="modal"
+                          >
+                            Cancelar
+                          </button>
+                          <button type="button" class="button save-button">
+                            Guardar cambios
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="second__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-css3-alt text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+              <div class="edit__container skill">
+                <span class="span-edit skills d-flex justify-content-center"
+                  >Editar Skill</span
+                >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-secondSkill"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+              <!-- Modal Second Skill -->
+              <div class="modal__container">
+                <div
+                  class="modal fade edit-skill"
+                  id="modal-secondSkill"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Editar Skill 2</h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <span class="modal-input-span title"
+                          >Ingresa un porcentaje 👇🏻</span
+                        >
+                        <input
+                          type="number"
+                          class="modal-input"
+                          required
+                          placeholder="Ingresa un número"
+                        />
+                      </div>
+                      <div class="modal-footer d-flex justify-content-between">
+                        <div class="left__container">
+                          <span class="delete-item">Eliminar item</span>
+                        </div>
+                        <div class="right__container">
+                          <button
+                            type="button"
+                            class="button cancel-button"
+                            data-dismiss="modal"
+                          >
+                            Cancelar
+                          </button>
+                          <button type="button" class="button save-button">
+                            Guardar cambios
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="third__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-bootstrap text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+              <div class="edit__container skill">
+                <span class="span-edit skills d-flex justify-content-center"
+                  >Editar Skill</span
+                >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-thirdSkill"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Third Skill -->
+          <div class="modal__container">
+            <div class="modal fade edit-skill id="modal-thirdSkill"
+            tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true" >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Editar Skill 3</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span class="modal-input-span title"
+                    >Ingresa un porcentaje 👇🏻</span
+                  >
+                  <input
+                    type="number"
+                    class="modal-input"
+                    required
+                    placeholder="Ingresa un número"
+                  />
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                  <div class="left__container">
+                    <span class="delete-item">Eliminar item</span>
+                  </div>
+                  <div class="right__container">
+                    <button
+                      type="button"
+                      class="button cancel-button"
+                      data-dismiss="modal"
+                    >
+                      Cancelar
+                    </button>
+                    <button type="button" class="button save-button">
+                      Guardar cambios
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="skills__container d-flex align-items-center justify-content-between"
+        >
+          <div class="fourth__skill skill">
+            <div class="skill-outer">
+              <div class="skill-inner">
+                <div class="skill__icon">
+                  <i class="fa-brands fa-square-js text-black"></i>
+                </div>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#F6D365" />
+                  <stop offset="100%" stop-color="#FDA085" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" />
+            </svg>
+            <div class="edit__container skill">
+              <span class="span-edit skills d-flex justify-content-center"
+                >Editar Skill</span
+              >
+              <div class="edit-button__container d-flex justify-content-center">
+                <button
+                  class="edit-button rounded-circle"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#modal-banner"
+                >
+                  <img src="assets/Edit-icon.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="fifth__skill skill">
+            <div class="skill-outer">
+              <div class="skill-inner">
+                <div class="skill__icon">
+                  <img
+                    src="https://img.icons8.com/material-rounded/512/typescript.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#F6D365" />
+                  <stop offset="100%" stop-color="#FDA085" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" />
+            </svg>
+            <div class="edit__container skill">
+              <span class="span-edit skills d-flex justify-content-center"
+                >Editar Skill</span
+              >
+              <div class="edit-button__container d-flex justify-content-center">
+                <button
+                  class="edit-button rounded-circle"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#modal-banner"
+                >
+                  <img src="assets/Edit-icon.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sixth__skill skill">
+            <div class="skill-outer">
+              <div class="skill-inner">
+                <div class="skill__icon">
+                  <i class="fa-brands fa-angular text-black"></i>
+                </div>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="160px"
+              height="160px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#F6D365" />
+                  <stop offset="100%" stop-color="#FDA085" />
+                </linearGradient>
+              </defs>
+              <circle cx="80" cy="80" r="70" />
+            </svg>
+            <div class="edit__container skill">
+              <span class="span-edit skills d-flex justify-content-center"
+                >Editar Skill</span
+              >
+              <div class="edit-button__container d-flex justify-content-center">
+                <button
+                  class="edit-button rounded-circle"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#modal-banner"
+                >
+                  <img src="assets/Edit-icon.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    
-         
-</body>
+
+    <div class="divider"></div>
+
+    <div class="section__container">
+      <section class="section">
+        <span class="section__name">Proyectos</span>
+        <div
+          class="edit__container new-card d-flex justify-content-between align-items-center"
+        >
+          <span class="span-edit s-new-card">Agregar nuevo proyecto</span>
+          <div class="edit-button__container d-flex justify-content-center">
+            <button
+              class="edit-button rounded-circle d-flex justify-content-center align-items-center"
+              type="button"
+              data-toggle="modal"
+              data-target="#modal-newCard"
+            >
+              <img src="assets/plus.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- Modal añadir Card -->
+        <div class="modal__container">
+          <div
+            class="modal fade new-Card"
+            id="modal-newCard"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Agregar nuevo proyecto</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span class="modal-input-span"
+                    >Ingresa la URL de la imagen 👇🏻</span
+                  >
+                  <input
+                    type="url"
+                    class="modal-input"
+                    required
+                    placeholder="https://www"
+                  />
+                  <label class="modal-label title" for="#modal-nombre"
+                    >Ingresa aquí el nombre del proyecto 👇🏻</label
+                  >
+                  <input
+                    type="text"
+                    name=""
+                    id="modal-nombre"
+                    class="modal-input"
+                    placeholder="Nombre del proyecto"
+                  />
+                  <label class="modal-label title" for="#modal-textarea"
+                    >Ingresa aquí una breve descripción del mismo 👇🏻</label
+                  >
+                  <textarea
+                    name=""
+                    id="modal-textarea"
+                    cols="30"
+                    rows="5"
+                    type="text"
+                    class="form-label modal-textarea"
+                    maxlength="250"
+                    required
+                    placeholder="Ingresa aquí una descripción del proyecto"
+                  ></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="button cancel-button"
+                    data-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button type="button" class="button save-button">
+                    Agregar proyecto
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__items-container">
+          <div class="cards__container d-flex">
+            <div class="card__container">
+              <div class="card">
+                <div class="card__img">
+                  <img src="assets/MidonApp.png" alt="" />
+                </div>
+                <div class="card__text-container">
+                  <span class="project-name">MiDonApp</span>
+                  <p class="project-description">
+                    MiDonApp nació como una solución a una problemática social
+                    muy presente en mi comunidad. Busca mejorar en varios
+                    aspectos la convivencia social, teniendo como fin el
+                    desarrollo de las personas más necesitadas.
+                  </p>
+                </div>
+                <a href="#" class="card__button-href"
+                  ><button class="card__button">
+                    Visitar proyecto |
+                    <img
+                      src="assets/ExternalLink-Icon.png"
+                      alt=""
+                      class="external-link"
+                    /></button
+                ></a>
+              </div>
+              <div class="edit__container edit-cards">
+                <span class="span-edit cards d-flex justify-content-center"
+                  >Editar Card</span
+                >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-firstCard"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Modal First Card -->
+            <div class="modal__container">
+              <div
+                class="modal fade edit-card"
+                id="modal-firstCard"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Editar Card 1</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span class="modal-input-span"
+                        >Ingresa la URL de la imagen 👇🏻</span
+                      >
+                      <input
+                        type="url"
+                        class="modal-input"
+                        required
+                        placeholder="https://www"
+                      />
+                      <label class="modal-label title" for="#modal-nombre"
+                        >Ingresa aquí el nombre del proyecto 👇🏻</label
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id="modal-nombre"
+                        class="modal-input"
+                        placeholder="Nombre del proyecto"
+                      />
+                      <label class="modal-label title" for="#modal-textarea"
+                        >Ingresa aquí una breve descripción del mismo 👇🏻</label
+                      >
+                      <textarea
+                        name=""
+                        id="modal-textarea"
+                        cols="30"
+                        rows="5"
+                        type="text"
+                        class="form-label modal-textarea"
+                        maxlength="250"
+                        required
+                        placeholder="Ingresa aquí una descripción del proyecto"
+                      ></textarea>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                      <div class="left__container">
+                        <span class="delete-item">Eliminar item</span>
+                      </div>
+                      <div class="right__container">
+                        <button
+                          type="button"
+                          class="button cancel-button"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button type="button" class="button save-button">
+                          Guardar cambios
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__container">
+              <div class="card">
+                <div class="card__img">
+                  <img src="assets/MidonApp.png" alt="" />
+                </div>
+                <div class="card__text-container">
+                  <span class="project-name">MiDonApp</span>
+                  <p class="project-description">
+                    MiDonApp nació como una solución a una problemática social
+                    muy presente en mi comunidad. Busca mejorar en varios
+                    aspectos la convivencia social, teniendo como fin el
+                    desarrollo de las personas más necesitadas.
+                  </p>
+                </div>
+                <a href="#" class="card__button-href"
+                  ><button class="card__button">
+                    Visitar proyecto |
+                    <img
+                      src="assets/ExternalLink-Icon.png"
+                      alt=""
+                      class="external-link"
+                    /></button
+                ></a>
+              </div>
+              <div class="edit__container edit-cards">
+                <span class="span-edit cards d-flex justify-content-center"
+                  >Editar Card</span
+                >
+                <div
+                  class="edit-button__container d-flex justify-content-center"
+                >
+                  <button
+                    class="edit-button rounded-circle"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modal-secondCard"
+                  >
+                    <img src="assets/Edit-icon.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Second Card -->
+          <div class="modal__container">
+            <div
+              class="modal fade edit-card"
+              id="modal-secondCard"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Editar Card 2</h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <span class="modal-input-span"
+                      >Ingresa la URL de la imagen 👇🏻</span
+                    >
+                    <input
+                      type="url"
+                      class="modal-input"
+                      required
+                      placeholder="https://www"
+                    />
+                    <label class="modal-label title" for="#modal-nombre"
+                      >Ingresa aquí el nombre del proyecto 👇🏻</label
+                    >
+                    <input
+                      type="text"
+                      name=""
+                      id="modal-nombre"
+                      class="modal-input"
+                      placeholder="Nombre del proyecto"
+                    />
+                    <label class="modal-label title" for="#modal-textarea"
+                      >Ingresa aquí una breve descripción del mismo 👇🏻</label
+                    >
+                    <textarea
+                      name=""
+                      id="modal-textarea"
+                      cols="30"
+                      rows="5"
+                      type="text"
+                      class="form-label modal-textarea"
+                      maxlength="250"
+                      required
+                      placeholder="Ingresa aquí una descripción del proyecto"
+                    ></textarea>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <div class="left__container">
+                      <span class="delete-item">Eliminar item</span>
+                    </div>
+                    <div class="right__container">
+                      <button
+                        type="button"
+                        class="button cancel-button"
+                        data-dismiss="modal"
+                      >
+                        Cancelar
+                      </button>
+                      <button type="button" class="button save-button">
+                        Guardar cambios
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
