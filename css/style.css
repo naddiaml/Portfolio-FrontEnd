@@ -476,6 +476,12 @@ a.card__button-href[href] {
     width: 100%;
   }
 
+  .text-container__description {
+    font-size: 12px;
+    text-align: justify;
+    width: 95%;
+  }
+
   .about-section__list li img {
     margin-bottom: 10px;
     width: 60px;
@@ -570,7 +576,7 @@ a.card__button-href[href] {
   }
 
   .text-container__description {
-    font-size: 14px;
+    font-size: 13px;
     text-align: justify;
     width: 95%;
   }
