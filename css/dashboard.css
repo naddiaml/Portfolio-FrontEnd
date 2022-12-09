@@ -94,7 +94,7 @@
   margin: auto;
   width: 80vw;
   height: 40vh;
-  background-image: url(https://images.unsplash.com/photo-1534538495100-e945f7a5a9c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+  background-image: url(../assets/banner.jpg);
   background-position: 10% 50%;
   background-size: cover;
   z-index: -10;
@@ -611,15 +611,12 @@ circle {
 }
 
 .card__img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.card__img img {
   width: 100%;
-  border-radius: 15px;
+  height: 8rem;
+  border-radius: 0.5rem;
+  background-image: url(../assets/MiDonApp.png);
+  background-size: cover;
 }
 
 .card__text-container {
@@ -859,7 +856,7 @@ a.card__button-href[href] {
   }
 
   .card {
-    width: 20rem;
+    width: 22rem;
   }
 
   .project-name {

@@ -1,254 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/icon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/d1cf470953.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d1cf470953.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Mi Portfolio</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="header__container position-fixed">
-        <header class="header d-flex align-items-center">
-            <img src="assets/Argentina Programa logo.png" alt="" class="header__logo">
-            <nav class="nav">
-                    <input type="checkbox" name="" id="nav__checkbox" class="d-none">
-                    <label for="nav__checkbox" class="nav_checkbox-label m-0 ">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                    <ul class="nav__links mb-0 ps-0">
-                        <li><a href="https://www.instagram.com/naddiaml_/" target="_blank"><i class="fa-brands fa-instagram text-black nav__link"></i></a></li>
-                        <li><a href="https://twitter.com/naddiaml" target="_blank"><i class="fa-brands fa-twitter text-black nav__link"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/nadia-mlinarevic/" target="_blank"><i class="fa-brands fa-linkedin-in text-black nav__link"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa-brands fa-github text-black nav__link"></i></a></li>
-                        <a href="editMode.html"><button class="nav__button">Ingresar | Modo edición</button></a>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+      <header class="header d-flex align-items-center">
+        <img
+          src="assets/Argentina Programa logo.png"
+          alt=""
+          class="header__logo"
+        />
+        <nav class="nav">
+          <input type="checkbox" name="" id="nav__checkbox" class="d-none" />
+          <label for="nav__checkbox" class="nav_checkbox-label m-0">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <ul class="nav__links mb-0 ps-0">
+            <li>
+              <a href="https://www.instagram.com/naddiaml_/" target="_blank"
+                ><i class="fa-brands fa-instagram text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/naddiaml" target="_blank"
+                ><i class="fa-brands fa-twitter text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nadia-mlinarevic/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin-in text-black nav__link"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-github text-black nav__link"></i
+              ></a>
+            </li>
+            <a href="editMode.html"
+              ><button class="nav__button">Ingresar | Modo edición</button></a
+            >
+          </ul>
+        </nav>
+      </header>
     </div>
 
     <!-- Sección principal · About me -->
 
     <div class="section__container">
       <section class="about-section">
-              <div class="about-section__banner d-relative">
-                  <div class="edit-banner d-relative"></div>
-              </div>
-              <div class="about-section__display-container d-flex justify-content-around align-items-stretch">
-                  <div class="about-section__pfp-container">
-                     <div class="about-section__pfp position-relative rounded-circle">
-                      <div class="rounded-circle"></div>
-                     </div>
-                  </div>
-                  <div class="about-section__text-container">
-                      <p class="text-container__name">Nadia Mlinarevic</p>
-                      <p class="text-container__puesto">Full Stack Developer Jr.</p>
-                      <p class="text-container__description">Hola! Soy Nadia 🙋🏻‍♀️
-                          <br>
-                      → Tego 18 años y soy de Buenos Aires, Argentina.
-                          <br>
-                      → Soy ingresante a la carrera de Ingeniería en Sistemas y <span class="description__bold">Desarrolladora Web Full Stack Jr.</span> que busca capacitarse y mejorar constantemente en el área.
-                       <br>
-                     → Encuentro mi lugar en el área de IT porque puedo plasmar en distintos proyectos todas las cosas que me apasionan. Con el propósito de mejorar cada vez más, trato de perfeccionarme en este espacio en el cual me siento libre de crear, crecer y ser yo sin límites 🙌🏻.</p>
-                  </div>
-              </div>
-          
+        <div class="about-section__banner d-relative">
+          <div class="edit-banner d-relative"></div>
+        </div>
+        <div
+          class="about-section__display-container d-flex justify-content-around align-items-stretch"
+        >
+          <div class="about-section__pfp-container">
+            <div class="about-section__pfp position-relative rounded-circle">
+              <div class="rounded-circle"></div>
+            </div>
+          </div>
+          <div class="about-section__text-container">
+            <p class="text-container__name">Nadia Mlinarevic</p>
+            <p class="text-container__puesto">Full Stack Developer Jr.</p>
+            <p class="text-container__description">
+              Hola! Soy Nadia 🙋🏻‍♀️
+              <br />
+              → Tego 18 años y soy de Buenos Aires, Argentina.
+              <br />
+              → Soy ingresante a la carrera de Ingeniería en Sistemas y
+              <span class="description__bold"
+                >Desarrolladora Web Full Stack Jr.</span
+              >
+              que busca capacitarse y mejorar constantemente en el área.
+              <br />
+              → Encuentro mi lugar en el área de IT porque puedo plasmar en
+              distintos proyectos todas las cosas que me apasionan. Con el
+              propósito de mejorar cada vez más, trato de perfeccionarme en este
+              espacio en el cual me siento libre de crear, crecer y ser yo sin
+              límites 🙌🏻.
+            </p>
+          </div>
+        </div>
       </section>
-  </div>
-  
-    
+    </div>
+
     <div class="divider"></div>
 
-    
     <!-- Sección 2 · Educación -->
     <div class="section__container">
-        <section class="section">
-            <span class="section__name">Educación</span>
-            <div class="section__items-container">
-                <ul class="about-section__list mb-0 ps-0">
-                    <li class="list__items d-flex align-items-start"><img src="https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg" alt="Logo UTN BA">
-                        <!-- Ingeniería en Sistemas · UTN BA -->
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Ingreso · Ingeriería en Sistemas · UTN BA</span>
-                            <span class="finalizacion">En curso</span>
-                        </div>
-                    </li>
-                    <!-- Argentina Programa -->
-                    <li class="list__items d-flex align-items-start"><img src="assets/Argentina Programa logo.svg" alt="Logo Argentina Programa">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Argentina Programa</span>
-                            <span class="titulo">Desarrolladora Web Full Stack Jr.</span>
-                            <span class="finalizacion">2023</span>
-                        </div>
-                    </li>
-                    <!-- Curso Experiencia de Usuario UX/UI -->
-                    <li class="list__items d-flex align-items-start"><img src="https://plataforma.jumpedu.org/pluginfile.php/1/theme_edumy/headerlogo2/1659459569/jumpedu-logo%402x-8.png" alt="Logo Jump! Education">
-                      <div class="list__items-text d-flex flex-column">
-                          <span>Experiencia de Usuario UX/UI · Jump! Educación</span>
-                          <span class="finalizacion">2022</span>
-                      </div>
-                  </li>
-                    <!-- Curso UX -->
-                    <li class="list__items d-flex align-items-start"><img src="https://chicasentecnologia.org/wp-content/uploads/chicas_registrado.svg" alt="Logo Chicas en Tecnología">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Curso Diseño UX · Chicas en Tecnología</span>
-                            <span class="finalizacion">2022</span>
-                        </div>
-                    </li>
-                    <!-- Secundario -->
-                    <li class="list__items d-flex align-items-start"><img src="assets/SCB-logo.svg" alt="Logo · Colegio secundario San Carlos Borromeo">
-                        <div class="list__items-text d-flex flex-column">
-                            <span>Colegio Parroquial San Carlos Borromeo</span>
-                            <span class="titulo">Bachillerato en Comunicación</span>
-                            <span class="finalizacion">2022</span>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </section>
+      <section class="section">
+        <span class="section__name">Educación</span>
+        <div class="section__items-container">
+          <ul class="about-section__list mb-0 ps-0">
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://www.frba.utn.edu.ar/wp-content/uploads/2016/08/logo-utn.ba-horizontal-e1471367724904.jpg"
+                alt="Logo UTN BA"
+              />
+              <!-- Ingeniería en Sistemas · UTN BA -->
+              <div class="list__items-text d-flex flex-column">
+                <span>Ingreso · Ingeriería en Sistemas · UTN BA</span>
+                <span class="finalizacion">En curso</span>
+              </div>
+            </li>
+            <!-- Argentina Programa -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="assets/Argentina Programa logo.svg"
+                alt="Logo Argentina Programa"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Argentina Programa</span>
+                <span class="titulo">Desarrolladora Web Full Stack Jr.</span>
+                <span class="finalizacion">2023</span>
+              </div>
+            </li>
+            <!-- Curso Experiencia de Usuario UX/UI -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://plataforma.jumpedu.org/pluginfile.php/1/theme_edumy/headerlogo2/1659459569/jumpedu-logo%402x-8.png"
+                alt="Logo Jump! Education"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Experiencia de Usuario UX/UI · Jump! Educación</span>
+                <span class="finalizacion">2022</span>
+              </div>
+            </li>
+            <!-- Curso UX -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="https://chicasentecnologia.org/wp-content/uploads/chicas_registrado.svg"
+                alt="Logo Chicas en Tecnología"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Curso Diseño UX · Chicas en Tecnología</span>
+                <span class="finalizacion">2022</span>
+              </div>
+            </li>
+            <!-- Secundario -->
+            <li class="list__items d-flex align-items-start">
+              <img
+                src="assets/SCB-logo.svg"
+                alt="Logo · Colegio secundario San Carlos Borromeo"
+              />
+              <div class="list__items-text d-flex flex-column">
+                <span>Colegio Parroquial San Carlos Borromeo</span>
+                <span class="titulo">Bachillerato en Comunicación</span>
+                <span class="finalizacion">2022</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
 
     <div class="divider"></div>
 
     <!-- Sección 3 · Skills -->
     <div class="section__container">
-        <section class="section">
-            <p class="section__name"> Skills
-              <br>
-              <span class="aclaracion">Según ruta de aprendizaje recomendada.</span>
-            </p>
-            <div class="section__items-container">
-              <div class="skills__container d-flex align-items-center justify-content-between">
-
-                <div class="first__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-html5 text-black"></i>
-                      </div>
-                    </div>
+      <section class="section">
+        <p class="section__name">
+          Skills
+          <br />
+          <span class="aclaracion">Según ruta de aprendizaje recomendada.</span>
+        </p>
+        <div class="section__items-container">
+          <div
+            class="skills__container d-flex align-items-center justify-content-between"
+          >
+            <div class="first__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-html5 text-black"></i>
                   </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="second__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-css3-alt text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="third__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-bootstrap text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
                 </div>
               </div>
-  
-              <div class="skills__container d-flex align-items-center justify-content-between">
-  
-                <div class="fourth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-square-js text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="fifth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <img src="https://img.icons8.com/material-rounded/512/typescript.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-  
-                <div class="sixth__skill skill">
-                  <div class="skill-outer">
-                    <div class="skill-inner">
-                      <div class="skill__icon">
-                        <i class="fa-brands fa-angular text-black"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                       <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#F6D365" />
-                          <stop offset="100%" stop-color="#FDA085" />
-                       </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" />
-                  </svg>
-                </div>
-              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
             </div>
-        </section>
+
+            <div class="second__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-css3-alt text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+            </div>
+
+            <div class="third__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-bootstrap text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="skills__container d-flex align-items-center justify-content-between"
+          >
+            <div class="fourth__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-square-js text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+            </div>
+
+            <div class="fifth__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <img
+                      src="https://img.icons8.com/material-rounded/512/typescript.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+            </div>
+
+            <div class="sixth__skill skill">
+              <div class="skill-outer">
+                <div class="skill-inner">
+                  <div class="skill__icon">
+                    <i class="fa-brands fa-angular text-black"></i>
+                  </div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#F6D365" />
+                    <stop offset="100%" stop-color="#FDA085" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <div class="divider"></div>
@@ -258,29 +355,54 @@
         <div class="section__items-container">
           <div class="cards__container d-flex">
             <div class="card">
-              <div class="card__img">
-                <img src="assets/MidonApp.png" alt="">
-              </div>
+              <div
+                class="card__img d-flex align-items-center justify-content-center"
+              ></div>
               <div class="card__text-container">
                 <span class="project-name">MiDonApp</span>
-                <p class="project-description">MiDonApp nació como una solución a una problemática social muy presente en mi comunidad. Busca mejorar en varios aspectos la convivencia social, teniendo como fin el desarrollo de las personas más necesitadas.</p>
+                <p class="project-description">
+                  MiDonApp nació como una solución a una problemática social muy
+                  presente en mi comunidad. Busca mejorar en varios aspectos la
+                  convivencia social, teniendo como fin el desarrollo de las
+                  personas más necesitadas.
+                </p>
               </div>
-              <a href="#" class="card__button-href"><button class="card__button">Visitar proyecto | <img src="assets/ExternalLink-Icon.png" alt="" class="external-link"></button></a>
+              <a href="#" class="card__button-href"
+                ><button class="card__button">
+                  Visitar proyecto |
+                  <img
+                    src="assets/ExternalLink-Icon.png"
+                    alt=""
+                    class="external-link"
+                  /></button
+              ></a>
             </div>
             <div class="card">
-              <div class="card__img">
-                <img src="assets/MidonApp.png" alt="">
-              </div>
+              <div
+                class="card__img d-flex align-items-center justify-content-center"
+              ></div>
               <div class="card__text-container">
                 <span class="project-name">MiDonApp</span>
-                <p class="project-description">MiDonApp nació como una solución a una problemática social muy presente en mi comunidad. Busca mejorar en varios aspectos la convivencia social, teniendo como fin el desarrollo de las personas más necesitadas.</p>
+                <p class="project-description">
+                  MiDonApp nació como una solución a una problemática social muy
+                  presente en mi comunidad. Busca mejorar en varios aspectos la
+                  convivencia social, teniendo como fin el desarrollo de las
+                  personas más necesitadas.
+                </p>
               </div>
-              <a href="#" class="card__button-href"><button class="card__button">Visitar proyecto | <img src="assets/ExternalLink-Icon.png" alt="" class="external-link"></button></a>
+              <a href="#" class="card__button-href"
+                ><button class="card__button">
+                  Visitar proyecto |
+                  <img
+                    src="assets/ExternalLink-Icon.png"
+                    alt=""
+                    class="external-link"
+                  /></button
+              ></a>
             </div>
           </div>
         </div>
+      </section>
     </div>
-    
-         
-</body>
+  </body>
 </html>
