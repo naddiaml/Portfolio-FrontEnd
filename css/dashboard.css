@@ -1,6 +1,6 @@
 :root {
   --gradient: linear-gradient(to right, #f6d365, #fda085);
-  --background-button: #d9d9d9;
+  --gray-bg: #d9d9d9;
   --background-edit__container: #dedede;
   --card-background: #fcfcfc;
 }
@@ -58,10 +58,17 @@
   border-radius: 50px;
   width: 200px;
   height: 45px;
-  background: var(--background-button);
   padding: 15px;
   font-size: 12px;
   cursor: pointer;
+}
+
+.gradient {
+  background: var(--gradient);
+}
+
+.gray {
+  background: var(--gray-bg);
 }
 
 /* Menú mobile responsive */
@@ -231,7 +238,7 @@
 }
 
 .edit__container {
-  background-color: var(--background-button);
+  background-color: var(--background-edit__container);
   border-radius: 1rem 0px 1rem 0.1rem;
 }
 
@@ -425,7 +432,7 @@
 }
 
 .edit__container.items:hover {
-  background: var(--background-button);
+  background: var(--gray-bg);
   transition: 0.5s;
 }
 
