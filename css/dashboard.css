@@ -159,7 +159,7 @@
   margin: 0.5rem 0;
   padding: 1rem;
   font-size: 14px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 
 .button {
@@ -283,7 +283,7 @@
   width: 100%;
   padding: 1rem;
   font-size: 14px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 
 .about-section__text-container {
@@ -336,6 +336,28 @@
 .section__name {
   font-size: 18px;
   font-weight: 700;
+}
+
+.input-file {
+  display: none;
+}
+
+.choose-file__container {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.choose-file__container label {
+  width: 50%;
+  padding: 0.75rem;
+  background-color: #ffdf81;
+  border-radius: 2rem;
+  font-size: 13px;
+}
+
+.choose-file__container label i {
+  margin-right: 0.5rem;
+  font-size: 12px;
 }
 
 .section__items-container {
@@ -395,7 +417,7 @@
 }
 
 .edit__container.items .edit-button img {
-  width: 0.6rem;
+  width: 0.8rem;
 }
 
 .edit__container.items .span-edit.items {
@@ -407,22 +429,6 @@
   transition: 0.5s;
 }
 
-.edit__container.items:hover .span-edit.items {
-  font-size: 13px;
-  transition: 0.5s;
-}
-
-.edit__container.items:hover .edit-button {
-  width: 2rem;
-  height: 2rem;
-  transition: 0.5s;
-}
-
-.edit__container.items:hover .edit-button img {
-  width: 1rem;
-  transition: 0.5s;
-}
-
 .edit__container.items,
 .new-item,
 .new-skill,
@@ -431,11 +437,6 @@
   border-radius: 0rem 1rem 0.1rem 1rem;
   padding: 0.8rem;
   width: 20rem;
-}
-
-.edit__container.items:hover {
-  width: 21.5rem;
-  transition: 0.5s;
 }
 
 .span-edit.items,
@@ -613,10 +614,17 @@ circle {
 .card__img {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
   width: 100%;
-  height: 8rem;
+  height: 8.5rem;
   border-radius: 0.5rem;
-  background-image: url(../assets/MiDonApp.png);
   background-size: cover;
+}
+
+.card__img.first-card {
+  background-image: url(../../../assets/Portfolio.png);
+}
+
+.card__img.second-card {
+  background-image: url(../../../assets/MiDonApp.png);
 }
 
 .card__text-container {
@@ -655,8 +663,9 @@ a.card__button-href[href] {
   text-decoration: none;
 }
 
-.external-link {
-  width: 20px;
+i.external-link {
+  margin-left: 0.5rem;
+  font-size: 12px;
 }
 
 .card__button:hover {
@@ -665,8 +674,8 @@ a.card__button-href[href] {
   transition: 0.5s;
 }
 
-.card__button:hover img {
-  width: 22px;
+.card__button:hover i {
+  font-size: 15px;
   transition: 0.5s;
 }
 
@@ -878,12 +887,12 @@ a.card__button-href[href] {
     font-size: 11px;
   }
 
-  .card__button img {
-    width: 18px;
+  .card__button i {
+    font-size: 10px;
   }
 
   .card__button:hover {
-    width: 30vw;
+    width: 32vw;
     font-size: 12px;
   }
 
